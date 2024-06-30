@@ -1,4 +1,4 @@
-''Capital of France Quiz
+Capital of France Quiz
 This HTML code creates a simple quiz that asks the user to identify the capital of France.
 
 Features:
