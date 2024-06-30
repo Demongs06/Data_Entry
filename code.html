@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Capital of France Quiz</title>
+<style>
+  .centered-div {
+    margin: 0 auto;
+    width: 50%; /* adjust the width as needed */
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+
+<div class="centered-div">
+  <h1>What is the capital of France?</h1>
+
+  <form>
+    <input type="radio" name="capital" value="Paris"> Paris<br>
+    <input type="radio" name="capital" value="London"> London<br>
+    <input type="radio" name="capital" value="Rome"> Rome<br>
+    <input type="radio" name="capital" value="Berlin"> Berlin<br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <p id="result"></p>
+</div>
+
+<script>
+const form = document.querySelector('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const selectedCapital = document.querySelector('input[name="capital"]:checked').value;
+  if (selectedCapital === 'Paris') {
+    result.textContent = 'Correct!';
+    result.style.color = 'green';
+  } else {
+    result.textContent = 'Incorrect. Try again!';
+    result.style.color = 'red';
+  }
+});
+</script>
+
+</body>
+</html>
